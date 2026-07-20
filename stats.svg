@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="480" height="260" role="img" aria-label="GitHub stats card">
+  <defs>
+    
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#150822"/><stop offset="100%" stop-color="#2b0f3f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5fa8"/><stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="cardClip"><rect x="0" y="0" width="480" height="260" rx="18"/></clipPath>
+  </defs>
+  
+  <style>
+    .slideRow { opacity:0; animation: slideInKf .6s ease-out forwards; }
+    @keyframes slideInKf { 0%{opacity:0; transform:translateX(-24px);} 100%{opacity:1; transform:translateX(0);} }
+    .popCell { opacity:0; transform-box: fill-box; transform-origin:center; animation: popCellKf .55s cubic-bezier(.2,.9,.3,1.4) forwards; }
+    @keyframes popCellKf { 0%{opacity:0; transform:scale(.5) translateY(14px);} 60%{opacity:1; transform:scale(1.06);} 100%{opacity:1; transform:scale(1) translateY(0);} }
+    .shine { transform-box: fill-box; animation: shineKf 3.2s ease-in-out infinite; }
+    @keyframes shineKf { 0%{transform:translateX(-150px);} 60%{transform:translateX(150px);} 100%{transform:translateX(150px);} }
+    .glowPulse { animation: glowPulseKf 2.4s ease-in-out infinite; }
+    @keyframes glowPulseKf { 0%,100%{opacity:.65;} 50%{opacity:1;} }
+  </style>
+
+  <g clip-path="url(#cardClip)">
+    <rect width="480" height="260" fill="url(#bg)"/>
+    <rect width="480" height="260" fill="none" stroke="#ff6fd8" stroke-opacity="0.35"/>
+    <text x="24" y="30" font-family="Verdana,sans-serif" font-size="14" font-weight="700" fill="#f6ecff">GitHub Stats</text>
+
+    <g transform="translate(82,130)">
+      <circle r="58" fill="none" stroke="#1e0e30" stroke-width="10"/>
+      <circle r="58" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"
+        stroke-dasharray="306.1 364.4" transform="rotate(-90)" filter="url(#glow)">
+        <animate attributeName="stroke-dasharray" from="0 364.4" to="306.1 364.4" dur="1.6s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.22 0.61 0.36 1"/>
+      </circle>
+      <text x="0" y="8" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="800" fill="#f6ecff" class="glowPulse">A+</text>
+      <text x="0" y="30" text-anchor="middle" font-family="Verdana,sans-serif" font-size="9" fill="#c9a8e0">RANK</text>
+    </g>
+
+    
+    <g transform="translate(190,46)">
+      <g class="slideRow" style="animation-delay:0.30s">
+        <text x="0" y="0" font-family="Verdana,sans-serif" font-size="12.5" fill="#c9a8e0">★  Total Stars</text>
+        <text x="270" y="0" text-anchor="end" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#ff8fd0">42</text>
+      </g>
+    </g>
+    <g transform="translate(190,86)">
+      <g class="slideRow" style="animation-delay:0.45s">
+        <text x="0" y="0" font-family="Verdana,sans-serif" font-size="12.5" fill="#c9a8e0">⌘  Total Commits (2026)</text>
+        <text x="270" y="0" text-anchor="end" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#ff8fd0">810</text>
+      </g>
+    </g>
+    <g transform="translate(190,126)">
+      <g class="slideRow" style="animation-delay:0.60s">
+        <text x="0" y="0" font-family="Verdana,sans-serif" font-size="12.5" fill="#c9a8e0">⌥  Total PRs</text>
+        <text x="270" y="0" text-anchor="end" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#ff8fd0">27</text>
+      </g>
+    </g>
+    <g transform="translate(190,166)">
+      <g class="slideRow" style="animation-delay:0.75s">
+        <text x="0" y="0" font-family="Verdana,sans-serif" font-size="12.5" fill="#c9a8e0">◈  Total Issues</text>
+        <text x="270" y="0" text-anchor="end" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#ff8fd0">14</text>
+      </g>
+    </g>
+    <g transform="translate(190,206)">
+      <g class="slideRow" style="animation-delay:0.90s">
+        <text x="0" y="0" font-family="Verdana,sans-serif" font-size="12.5" fill="#c9a8e0">◆  Contributed To</text>
+        <text x="270" y="0" text-anchor="end" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#ff8fd0">9</text>
+      </g>
+    </g>
+  </g>
+  <rect x="1" y="1" width="478" height="258" rx="17" fill="none" stroke="#ff6fd8" stroke-opacity="0.3"/>
+</svg>
